@@ -1,14 +1,14 @@
 var student1 = {
-  firstName: "Ali",
-  lastName: "Khan",
-  age: 20,
-  location: "New York",
+  firstName: "Ramzi",
+  lastName: "hkiri",
+  age: 29,
+  location: "tunisia",
 };
 var student2 = {
-  firstName: "Debbie",
-  lastName: "Smith",
-  age: 22,
-  location: "London",
+  firstName: "samir",
+  lastName: "derouich",
+  age: 26,
+  location: "bizerte",
 };
 var studentsList = [student1, student2];
 document.addEventListener("DOMContentLoaded", function () {

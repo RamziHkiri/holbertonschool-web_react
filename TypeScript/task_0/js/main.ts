@@ -1,3 +1,9 @@
+interface Student  {
+  firstName: string;
+  lastName: string;
+  age: number;
+  location: string;
+}
 var student1 = {
   firstName: "Ramzi",
   lastName: "hkiri",
@@ -10,7 +16,7 @@ var student2 = {
   age: 26,
   location: "bizerte",
 };
-var studentsList = [student1, student2];
+var studentsList : Array<Student> = [student1, student2];
 document.addEventListener("DOMContentLoaded", function () {
   var table = document.createElement("table");
   var headerRow = table.insertRow();
