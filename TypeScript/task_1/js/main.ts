@@ -1,31 +1,44 @@
-var student1 = {
-  firstName: "Ramzi",
-  lastName: "hkiri",
-  age: 29,
-  location: "tunisia",
-};
-var student2 = {
-  firstName: "samir",
-  lastName: "derouich",
-  age: 26,
-  location: "bizerte",
-};
-var studentsList = [student1, student2];
-document.addEventListener("DOMContentLoaded", function () {
-  var table = document.createElement("table");
-  var headerRow = table.insertRow();
-  var headerNames = ["First Name", "Location"];
-  headerNames.forEach(function (name) {
-      var th = document.createElement("th");
-      th.textContent = name;
-      headerRow.appendChild(th);
-  });
-  studentsList.forEach(function (student) {
-      var row = table.insertRow();
-      var cellFirstName = row.insertCell();
-      var cellLocation = row.insertCell();
-      cellFirstName.textContent = student.firstName;
-      cellLocation.textContent = student.location;
-  });
-  document.body.appendChild(table);
-});
+export interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [propName: string]: any;
+}
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+function printTeacher(firstName: string, lastName: string) {
+  return (firstName[0] + ". " + lastName);
+}
+
+//The constructor of the class should be described through an Interface
+export interface StudentConstructor {
+  new(firstName: string, lastName: string): StudentClassInterface;
+}
+
+export interface StudentClassInterface {
+  displayName(): string;
+  workOnHomework(): string;
+}
+
+class StudentClass implements StudentClassInterface  {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+  displayName(): string {
+    return this.firstName;
+  }
+
+}

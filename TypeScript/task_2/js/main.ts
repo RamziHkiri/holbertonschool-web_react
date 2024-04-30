@@ -1,3 +1,5 @@
+
+
 interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
@@ -52,9 +54,18 @@ export function isDirector(employee: DirectorInterface | TeacherInterface): empl
 }
 
 export function executeWork(employee: DirectorInterface | TeacherInterface): string {
-  if(isDirector(employee)) {
+  if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
     return employee.workTeacherTasks();
   }
+}
+type Subjects = "Math" | "History";
+function teachClass(todayClass: Subjects) {
+  if (todayClass === "Math")
+    return ("Teaching Math")
+  else if (todayClass === "History")
+    return ("Teaching History")
+  else
+    throw Error;
 }
