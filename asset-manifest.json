@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dashboard/static/css/main.ed2348ca.css",
+    "main.js": "/dashboard/static/js/main.f175495d.js",
+    "static/media/holberton.jpg": "/dashboard/static/media/holberton.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/dashboard/index.html",
+    "main.ed2348ca.css.map": "/dashboard/static/css/main.ed2348ca.css.map",
+    "main.f175495d.js.map": "/dashboard/static/js/main.f175495d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed2348ca.css",
+    "static/js/main.f175495d.js"
+  ]
+}
