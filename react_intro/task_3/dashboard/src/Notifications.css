@@ -1,0 +1,10 @@
+.Notifications{
+    border: 2px dashed #dc1010 ;
+    padding: 20px;
+}
+.default{
+    color: blue;
+}
+.urgent{
+    color: red;
+}
