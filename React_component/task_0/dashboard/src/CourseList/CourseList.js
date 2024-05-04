@@ -34,3 +34,4 @@ CourseList.propTypes = {
 };
 
 export default CourseList;
+
