@@ -1,0 +1,17 @@
+.App-header {
+    padding-left: 50px;
+    display: flex;
+    border-bottom: 3px solid #dc1010;
+    align-content: start;
+    justify-content: space-between;
+}
+
+.App-header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #dc1010;
+}
+
+.App-logo {
+    width: 100px;
+    height: auto;
+}
