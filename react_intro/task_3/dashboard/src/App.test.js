@@ -1,27 +1,27 @@
+// App.test.js
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
-describe('App component tests', () => {
-  it('renders without crashing', () => {
-    shallow(<App />);
-  });
+test('renders App component without crashing', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.exists()).toBe(true);
+});
 
-  it('renders a div with the class App-header', () => {
-    const wrapper = shallow(<App />);
-    const appHeader = wrapper.find('.App-header');
-    expect(appHeader.exists()).toBe(true);
-  });
+test('renders App component with App-header div', () => {
+  const wrapper = shallow(<App />);
+  const appHeaderDiv = wrapper.find('.App-header');
+  expect(appHeaderDiv.exists()).toBe(true);
+});
 
-  it('renders a div with the class App-body', () => {
-    const wrapper = shallow(<App />);
-    const appBody = wrapper.find('.App-body');
-    expect(appBody.exists()).toBe(true);
-  });
+test('renders App component with App-body div', () => {
+  const wrapper = shallow(<App />);
+  const appBodyDiv = wrapper.find('.App-body');
+  expect(appBodyDiv.exists()).toBe(true);
+});
 
-  it('renders a div with the class App-footer', () => {
-    const wrapper = shallow(<App />);
-    const appFooter = wrapper.find('.App-footer');
-    expect(appFooter.exists()).toBe(true);
-  });
+test('renders App component with App-footer div', () => {
+  const wrapper = shallow(<App />);
+  const appFooterDiv = wrapper.find('.App-footer');
+  expect(appFooterDiv.exists()).toBe(true);
 });

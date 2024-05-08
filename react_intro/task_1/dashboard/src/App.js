@@ -1,6 +1,6 @@
 import holberton from './holberton.jpg';
 import './App.css';
-import getFooterCopy from './utils';
+import {getFooterCopy} from './utils';
 
 function App() {
   const footerCopy = getFooterCopy(true);
@@ -12,6 +12,8 @@ function App() {
       </div>
       <div className="App-body">
         <p>Login to access the full dashboard</p>
+       
+        <button>OK</button>
       </div>
       <div className="App-footer">
         <p>{footerCopy}</p>
