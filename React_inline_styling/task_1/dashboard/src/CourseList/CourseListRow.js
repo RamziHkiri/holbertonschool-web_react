@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function CourseListRow({ isHeader = false, textFirstCell, textSecondCell = null }) {
   if (isHeader) {
     return (
-      <tr style={{ backgroundColor: '#deb5b545' }}>
+      <tr className={css(styles.headerBG)}>
         {textSecondCell === null ? (
           <th colSpan="2">{textFirstCell}</th>
         ) : (
@@ -17,13 +17,21 @@ function CourseListRow({ isHeader = false, textFirstCell, textSecondCell = null 
     );
   } else {
     return (
-      <tr style={{backgroundColor: '#f5f5f5ab'}}>
+      <tr className={css(styles.rowBG)}>
         <td>{textFirstCell}</td>
         <td>{textSecondCell}</td>
       </tr>
     );
   }
 }
+const styles = StyleSheet.create({
+	rowBG: {
+		backgroundColor: "#f5f5f5ab",
+	},
+	headerBG: {
+		backgroundColor: "#deb5b545",
+	}
+});
 
 CourseListRow.propTypes = {
   isHeader: PropTypes.bool,
