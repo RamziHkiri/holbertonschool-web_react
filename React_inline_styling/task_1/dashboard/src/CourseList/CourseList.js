@@ -7,11 +7,11 @@ import CourseShape from './CourseShape';
 function CourseList({ listCourses = [] }) {
     return (
         <table className= {css(styles.table)}>
-            <thead>
+            <thead className= {css(styles.tableHeaderCell)}>
                 <CourseListRow isHeader={true} textFirstCell="Available courses" />
                 <CourseListRow isHeader={true} textFirstCell="Course name" textSecondCell="Credit" />
             </thead>
-            <tbody>
+            <tbody className= {css(styles.tableBodyCell)}>
             {listCourses.length > 0 ? (
                     listCourses.map(course => (
                         <CourseListRow
